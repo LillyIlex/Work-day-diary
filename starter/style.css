@@ -21,6 +21,9 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+.textRow {
+  margin: 10px;
+}
 .description {
   white-space: pre-wrap;
 }

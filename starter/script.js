@@ -39,21 +39,22 @@ function timeChecker(currentHour, textRow) {
     var currentHour = moment().hours()
     if (currentHour === currentHour) {
         textRow.addClass('present');
-        console.log('You are in the Present!');
+        console.log('Present time');
     } else if (currentHour > hour) {
-        console.log(' <- Elements in the Past!');
+        console.log('Past events');
         textRow.addClass('past');
         textRow.removeClass('present');
     } else {
-        console.log('<- Elements in the Future!');
+        console.log('Future events');
         textRow.addClass('future');
     }
+    //timeChecker()
 }
 
 
 
 //Allow a user to enter an event when they click a timeblock (event.listeners on save button)
-saveBtn.addEventListener("click", )
+saveBtn.addEventListener("click",  )
 
 //Save the event in local storage when the save button is clicked in that timeblock (local storage)
 
