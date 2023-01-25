@@ -70,7 +70,7 @@ function timeChecker(currentHour, textArea) {
     }
 timeChecker() */
 
-var currentHour = moment().hours();
+var currentTime = moment().hours();
 var textArea = $(".text-area");
 var textBox = $(".textRow");
 var testTime = 12
@@ -78,18 +78,17 @@ var testTime = 12
 console.log(textBox)
 
 for (i = 0; i < textBox.length; i++) {
-    var rowId = textBox[i].id 
-    console.log(textBox[i].id)
+    var rowId = textArea[i].id 
+   // console.log(textArea[i].id)
 
-    if (rowId == testTime) {
-        console.log(rowId[i] + ' present');
+    if (rowId == currentTime) {
+        //console.log(rowId[i] + ' present');
         textArea[i].classList.add('present');
-    } else if  (rowId < testTime) {
-        console.log(rowId + ' past');
+    } else if  (rowId < currentTime) {
+       // console.log(rowId + ' past');
         textArea[i].classList.add('past')
-       // textArea[i].classList.remove('present')
-    } else if (rowId > testTime) {
-        console.log(rowId + ' future')
+    } else if (rowId > currentTime) {
+       // console.log(rowId + ' future')
         textArea[i].classList.add('future')
     } //NOT WORKING, ALL DISPLAYING "PAST"
 }
