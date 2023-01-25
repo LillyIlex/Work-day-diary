@@ -1,7 +1,5 @@
 
-
-
-// Display the current day 
+// DATE & TIME FROM MOMENT.JS
 
 var datetime = null,
     date = null;
@@ -16,70 +14,18 @@ $(document).ready(function () {
     setInterval(update, 1000);
 });
 
-//Color-code each timeblock based on past, present, and future
 
-//const currentHour = moment().hour()
-//console.log(hour)
-
-/*if (currentHour === moment().hour()) {
-    textRow.addClass("present")
-    console.log("present")
-} else if (currentHour < moment().hour()) {
-    textRow.addClass("past")
-    textRow.removeClass("present")
-    console.log("grey out")
-} else {
-    textRow.addClass("future")
-    console.log("turn green")
-} */
 //GLOBAL VARS
-
-//var textArea = document.querySelector('.text-area')
-//var timeStamp = document.querySelector('.timeStamp')
-
-//target time stamp to compar with current hour in time checker
-/*for (var i=0, i < timeSlot.length(), i++) {
-    timeStamp = timeSlot[i].innerHTML
-    append
-}*/
-/*
-function timeChecker(currentHour, textArea) {
-    var currentHour = moment().hours();
-    var textArea = document.querySelectorAll('text-area'); 
-   var timeSlot = document.querySelectorAll("span")
-  console.log(timeSlot.dataset.number)
-
-    for (i = 0; i < textArea.length; i++) {
-        console.log(timeSlot[i])
-        if (timeSlot[i] === currentHour) {
-                 textArea.setAttribute('class', 'present');
-                 console.log(currentHour)
-                 console.log('Present time');
-             }
-        else if (currentHour > timeSlot[i]) {
-            console.log('Past events');
-            textArea.setAttribute('class','past');
-            textArea.classList.remove('present');
-        } else {
-            // (currentHour < timeSlot[i]) {
-            console.log('Future events');
-            textArea.setAttribute('class', 'future');
-            console.log(currentHour)
-        }
-        }
-    }
-timeChecker() */
-
 var currentTime = moment().hours();
 var textArea = $(".text-area");
 var textBox = $(".textRow");
 var testTime = 12
+//console.log(textBox)
 
-console.log(textBox)
+//Color-code each timeblock based on past, present, and future
 
 for (i = 0; i < textBox.length; i++) {
-    var rowId = textArea[i].id 
-   // console.log(textArea[i].id)
+    var rowId = textArea[i].id
 
     if (rowId == currentTime) {
         //console.log(rowId[i] + ' present');
@@ -90,7 +36,7 @@ for (i = 0; i < textBox.length; i++) {
     } else if (rowId > currentTime) {
        // console.log(rowId + ' future')
         textArea[i].classList.add('future')
-    } //NOT WORKING, ALL DISPLAYING "PAST"
+    } 
 }
 
 
