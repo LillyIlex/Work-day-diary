@@ -45,30 +45,24 @@ $(document).ready(function () {
 
         var textEntry = $(this).siblings("textarea").val();
         var time = $(this).siblings("textarea").attr('id');
-        localStorage.setItem(time, textEntry);
-//      console.log(time + textEntry)
+       localStorage.setItem(time, textEntry);
 
-       $(this).val(localStorage.getItem(time, textEntry))
-       
-       
        $(function () {
-            $("#9").val(localStorage.getItem("9am"));
-            $("#10").val(localStorage.getItem("10am"));
-            $("#11").val(localStorage.getItem("11am"));
-            $("#12").val(localStorage.getItem("12pm"));
-            $("#13").val(localStorage.getItem("13pm"));
-            $("#14").val(localStorage.getItem("14pm"));
-            $("#15").val(localStorage.getItem("15pm"));
-            $("#16").val(localStorage.getItem("16pm"));
-            $("#17").val(localStorage.getItem("17pm"));
-
-
+            $("#9.innerHTML").val(localStorage.getItem("9am"));
+            $("#10.innerHTML").val(localStorage.getItem("10am"));
+            $("#11.innerHTML").val(localStorage.getItem("11am"));
+            $("#12.innerHTML").val(localStorage.getItem("12pm"));
+            $("#13.innerHTML").val(localStorage.getItem("1pm"));
+            $("#14.innerHTML").val(localStorage.getItem("2pm"));
+            $("#15.innerHTML").val(localStorage.getItem("3pm"));
+            $("#16.innerHTML").val(localStorage.getItem("4pm"));
+            $("#17.innerHTML").val(localStorage.getItem("5pm"));
         })
-        // save in localStorage
-        //Persist events between refreshes of a page 
+    });
+    //Persist events between refreshes of a page
 
-        //To retain the textarea details after refresh. Getting dettails from local storage
-        /*
-        */
+    $(".clearBtn").on("click", function() {
+      localStorage.clear()
+      //clear HTML
     });
 });
