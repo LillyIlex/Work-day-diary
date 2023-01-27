@@ -48,15 +48,15 @@ $(document).ready(function () {
        localStorage.setItem(time, textEntry);
 
        $(function () {
-            $("#9.innerHTML").val(localStorage.getItem("9am"));
-            $("#10.innerHTML").val(localStorage.getItem("10am"));
-            $("#11.innerHTML").val(localStorage.getItem("11am"));
-            $("#12.innerHTML").val(localStorage.getItem("12pm"));
-            $("#13.innerHTML").val(localStorage.getItem("1pm"));
-            $("#14.innerHTML").val(localStorage.getItem("2pm"));
-            $("#15.innerHTML").val(localStorage.getItem("3pm"));
-            $("#16.innerHTML").val(localStorage.getItem("4pm"));
-            $("#17.innerHTML").val(localStorage.getItem("5pm"));
+            $("#9.innerHTML").values(localStorage.getItem("9"));
+            $("#10.innerHTML").val(localStorage.getItem("10"));
+            $("#11.innerHTML").val(localStorage.getItem("11"));
+            $("#12.innerHTML").val(localStorage.getItem("12"));
+            $("#13.innerHTML").val(localStorage.getItem("1"));
+            $("#14.innerHTML").val(localStorage.getItem("2"));
+            $("#15.innerHTML").val(localStorage.getItem("15"));
+            $("#16.innerHTML").val(localStorage.getItem("16"));
+            $("#17.innerHTML").val(localStorage.getItem("17"));
         })
     });
     //Persist events between refreshes of a page
