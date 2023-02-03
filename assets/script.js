@@ -4,6 +4,7 @@ $(document).ready(function () {
     var textArea = $(".text-area");
     var textBox = $(".textRow");
     var testTime = 12
+
     //console.log(textBox)
 
     // DATE & TIME FROM MOMENT.JS
@@ -42,27 +43,37 @@ $(document).ready(function () {
 
     $(".saveBtn").on("click", function (event) {
         event.preventDefault();
-
         var textEntry = $(this).siblings("textarea").val();
         var time = $(this).siblings("textarea").attr('id');
-       localStorage.setItem(time, textEntry);
+        localStorage.setItem(time, textEntry);
 
-       $(function () {
-            $("#9.innerHTML").values(localStorage.getItem("9"));
-            $("#10.innerHTML").val(localStorage.getItem("10"));
-            $("#11.innerHTML").val(localStorage.getItem("11"));
-            $("#12.innerHTML").val(localStorage.getItem("12"));
-            $("#13.innerHTML").val(localStorage.getItem("1"));
-            $("#14.innerHTML").val(localStorage.getItem("2"));
-            $("#15.innerHTML").val(localStorage.getItem("15"));
-            $("#16.innerHTML").val(localStorage.getItem("16"));
-            $("#17.innerHTML").val(localStorage.getItem("17"));
-        })
-    });
-    //Persist events between refreshes of a page
 
-    $(".clearBtn").on("click", function() {
-      localStorage.clear()
-      //clear HTML
+
     });
+
+
+});
+$(function () {
+    $("#9").append(localStorage.getItem("9"))
+    $("#10").append(localStorage.getItem("10"))
+    $("#11").append(localStorage.getItem("11"))
+    $("#12").append(localStorage.getItem("12"))
+    $("#13").append(localStorage.getItem("13"))
+    $("#14").append(localStorage.getItem("14"))
+    $("#15").append(localStorage.getItem("13"))
+    $("#16").append(localStorage.getItem("16"))
+    $("#17").append(localStorage.getItem("17"))
+
+})
+$(".clearBtn").on("click", function () {
+    localStorage.clear()
+    $("#9").val("")
+    $("#10").val("")
+    $("#11").val("")
+    $("#12").val("")
+    $("#13").val("")
+    $("#14").val("")
+    $("#15").val("")
+    $("#16").val("")
+    $("#17").val("")
 });
